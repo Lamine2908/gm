@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENERAL MAINTENANCE - Partenaire Industriel de Référence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        body { font-family: 'Inter', sans-serif; }
+        .bg-industrial { background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=2000'); }
+        .logo-gm { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-amber-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
+            <!-- Logo inspiré du badge vestimentaire -->
+            <div class="flex items-center group cursor-pointer">
+                <div class="logo-gm w-14 h-14 rounded-lg flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300 border-2 border-white">
+                    <span class="text-white font-black text-2xl tracking-tighter italic">GM</span>
+                </div>
+                <div class="ml-4">
+                    <span class="block text-xl font-extrabold text-slate-900 leading-none uppercase tracking-tighter">General</span>
+                    <span class="block text-sm font-bold text-amber-600 uppercase tracking-widest">Maintenance</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex space-x-10 items-center">
+                <a href="#accueil" class="text-sm font-bold uppercase tracking-widest hover:text-amber-600 transition-colors">Accueil</a>
+                <a href="#expertise" class="text-sm font-bold uppercase tracking-widest hover:text-amber-600 transition-colors">Expertise</a>
+                <a href="#realisations" class="text-sm font-bold uppercase tracking-widest hover:text-amber-600 transition-colors">Nos Chantiers</a>
+                <a href="#sococim" class="text-sm font-bold uppercase tracking-widest hover:text-amber-600 transition-colors border-b-2 border-amber-500 pb-1">Partenaire Sococim</a>
+                <a href="#contact" class="bg-slate-900 text-white px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-amber-500 hover:scale-105 transition-all shadow-xl">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative min-h-screen flex items-center bg-industrial bg-cover bg-fixed pt-24">
+        <div class="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white space-y-8">
+                <div class="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-md p-2 pr-6 rounded-full border border-white/20">
+                    <span class="bg-amber-500 text-slate-900 px-3 py-1 rounded-full text-[10px] font-black uppercase">Official</span>
+                    <span class="text-xs font-bold uppercase tracking-widest">Sous-traitant SOCOCIM INDUSTRIES</span>
+                </div>
+                <h1 class="text-6xl lg:text-8xl font-black leading-[0.9] tracking-tighter">
+                    L'EXCELLENCE <br> <span class="text-amber-500 italic">TECHNIQUE</span>
+                </h1>
+                <p class="text-xl text-slate-300 leading-relaxed max-w-lg border-l-4 border-amber-500 pl-6">
+                    Spécialiste de la maintenance industrielle lourde à Thiès. Nous garantissons la performance opérationnelle des plus grands sites de production du Sénégal.
+                </p>
+                <div class="flex flex-wrap gap-5 pt-4">
+                    <a href="#contact" class="bg-amber-500 text-slate-900 px-10 py-5 rounded-xl font-black uppercase tracking-widest hover:bg-white transition-all shadow-2xl flex items-center">
+                        Démarrer un projet <i class="fas fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Badge Sococim Highlight -->
+            <div class="hidden lg:flex justify-end">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-3xl text-center w-80 rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <i class="fas fa-industry text-amber-500 text-6xl mb-6"></i>
+                    <h4 class="text-white text-2xl font-black mb-4 uppercase">Sococim industries</h4>
+                    <p class="text-slate-400 text-sm italic">"Partenaire stratégique pour la maintenance des installations cimentières de Rufisque."</p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white/50 text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Logo Section (Partenaires) -->
+    <section id="sococim" class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+            <span class="text-sm font-black uppercase tracking-widest text-slate-400 mb-8 md:mb-0">Nos collaborations majeures :</span>
+            <div class="flex items-center space-x-12">
+                <!-- Placeholder pour logo Sococim -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold">SI</div>
+                    <span class="text-2xl font-black text-slate-800 tracking-tighter">SOCOCIM <small class="text-xs">Industries</small></span>
+                </div>
+                <div class="h-10 w-px bg-slate-200 hidden md:block"></div>
+                <span class="text-xl font-bold text-slate-500">ETAT DU SENEGAL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-32">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                <div>
+                    <h2 class="text-amber-600 font-black uppercase tracking-[0.3em] text-sm mb-4">Notre Savoir-Faire</h2>
+                    <h3 class="text-5xl font-black text-slate-900 leading-tight mb-8">Solutions de Maintenance <span class="italic text-slate-400">360°</span></h3>
+                    <p class="text-slate-600 leading-relaxed mb-8 text-lg">
+                        De la mécanique de précision à la chaudronnerie lourde, nous intervenons sur les environnements les plus exigeants de la cimenterie et de la mine.
+                    </p>
+                    <a href="#expertise" class="inline-flex items-center font-black text-sm uppercase tracking-widest text-slate-900 hover:text-amber-600 transition-colors">
+                        Voir tout le catalogue <i class="fas fa-plus-circle ml-3"></i>
+                    </a>
+                </div>
+                
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Cards -->
+                    <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-xl hover:border-amber-500 transition-all group">
+                        <div class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 text-3xl mb-8 group-hover:bg-amber-500 group-hover:text-white transition-all">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h4 class="text-xl font-black mb-4 uppercase">Chaudronnerie Lourde</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">Réfection de viroles, blindages et structures porteuses pour les fours Sococim.</p>
+                    </div>
+                    
+                    <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-xl hover:border-blue-600 transition-all group">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4 class="text-xl font-black mb-4 uppercase">Électricité & Automation</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">Maintenance des armoires de commande et systèmes de régulation industrielle.</p>
+                    </div>
+
+                    <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-xl hover:border-amber-500 transition-all group">
+                        <div class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 text-3xl mb-8 group-hover:bg-amber-500 group-hover:text-white transition-all">
+                            <i class="fas fa-gears"></i>
+                        </div>
+                        <h4 class="text-xl font-black mb-4 uppercase">Mécanique de Précision</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">Entretien des réducteurs, pompes et ventilateurs de grande puissance.</p>
+                    </div>
+
+                    <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-xl hover:border-blue-600 transition-all group">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h4 class="text-xl font-black mb-4 uppercase">Génie Civil Industriel</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">Reprise de massifs, fondations et dallages spéciaux pour zones à haute contrainte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Realizations Section -->
+    <section id="realisations" class="py-32 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div>
+                    <h2 class="text-amber-500 font-black uppercase tracking-widest text-sm mb-4">Notre Personnel à l'Action</h2>
+                    <h3 class="text-5xl font-black tracking-tighter">SUR LE TERRAIN</h3>
+                </div>
+                <div class="max-w-md">
+                    <p class="text-slate-400 text-right italic">"La sécurité et la rigueur sont les piliers de notre engagement quotidien chez nos partenaires."</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Image 1: Soudeur (Référence à l'image fournie) -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl h-[600px]">
+                    <!-- Note: Remplacer l'URL par l'image du soudeur fournie par l'utilisateur -->
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1000" alt="Soudeur General Maintenance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-10 left-10">
+                        <span class="bg-amber-500 text-slate-900 px-4 py-1 rounded-full text-[10px] font-black uppercase mb-4 inline-block">Soudure Haute Pression</span>
+                        <h4 class="text-3xl font-black uppercase">Expertise Soudure</h4>
+                        <p class="text-slate-300">Intervention sur les structures métalliques Sococim.</p>
+                    </div>
+                </div>
+
+                <!-- Image 2: Equipe Factory (Référence à l'image fournie) -->
+                <div class="grid grid-cols-1 gap-10">
+                    <div class="group relative overflow-hidden rounded-3xl shadow-2xl h-[280px]">
+                        <!-- Note: Remplacer l'URL par l'image de l'équipe fournie par l'utilisateur -->
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000" alt="Equipe Sococim Maintenance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                            <span class="border-2 border-white px-8 py-3 rounded-full font-black uppercase tracking-widest">Voir l'équipe</span>
+                        </div>
+                    </div>
+                    <div class="bg-amber-500 p-12 rounded-3xl text-slate-900 flex flex-col justify-center">
+                        <h4 class="text-4xl font-black mb-4 uppercase leading-none italic">Depuis Octobre 2016</h4>
+                        <p class="text-lg font-bold mb-6">M. Lamine Ndiaye a bâti une équipe de professionnels dévoués à la maintenance industrielle au Sénégal.</p>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-1 bg-slate-900"></div>
+                            <span class="font-black uppercase tracking-tighter">General Maintenance Thiès</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Highlight / Sococim Focus -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Focus Partenaire</h2>
+            <h3 class="text-5xl font-black text-slate-900 mb-16 uppercase tracking-tighter">Projets Sococim Industries</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-slate-100 rounded-[3rem] overflow-hidden shadow-2xl">
+                <div class="p-12 border-r border-slate-100 hover:bg-slate-50 transition-colors">
+                    <span class="text-6xl font-black text-slate-100 block mb-6 leading-none">01</span>
+                    <h5 class="text-xl font-black mb-4 uppercase">Maintenance Fours</h5>
+                    <p class="text-slate-500 text-sm">Réfection thermique et mécanique périodique des fours rotatifs de la cimenterie.</p>
+                </div>
+                <div class="p-12 border-r border-slate-100 hover:bg-slate-50 transition-colors">
+                    <span class="text-6xl font-black text-slate-100 block mb-6 leading-none">02</span>
+                    <h5 class="text-xl font-black mb-4 uppercase">Broyeurs & Transport</h5>
+                    <p class="text-slate-500 text-sm">Entretien des systèmes de transport par bandes et des broyeurs à boulets haute performance.</p>
+                </div>
+                <div class="p-12 hover:bg-slate-50 transition-colors">
+                    <span class="text-6xl font-black text-slate-100 block mb-6 leading-none">03</span>
+                    <h5 class="text-xl font-black mb-4 uppercase">Silos & Stockage</h5>
+                    <p class="text-slate-500 text-sm">Maintenance structurelle et étanchéité des zones de stockage clinker et ciment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
+                <div class="lg:w-2/5 bg-slate-900 p-16 text-white relative">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500 -mr-16 -mt-16 rounded-full opacity-20"></div>
+                    <h3 class="text-4xl font-black mb-10 uppercase tracking-tighter italic text-amber-500">Let's build together</h3>
+                    <p class="text-slate-400 mb-12 text-lg leading-relaxed">Prêt à sécuriser vos installations ? Contactez l'expertise General Maintenance dès aujourd'hui.</p>
+                    
+                    <div class="space-y-10">
+                        <div class="flex items-center space-x-6">
+                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-amber-500 border border-white/10"><i class="fas fa-map-marker-alt"></i></div>
+                            <span class="font-bold text-sm uppercase tracking-widest">Thiès, HLM Route de Dakar</span>
+                        </div>
+                        <div class="flex items-center space-x-6">
+                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-amber-500 border border-white/10"><i class="fas fa-phone"></i></div>
+                            <span class="font-bold text-sm uppercase tracking-widest">+221 33 951 XX XX</span>
+                        </div>
+                        <div class="flex items-center space-x-6">
+                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-amber-500 border border-white/10"><i class="fas fa-envelope"></i></div>
+                            <span class="font-bold text-sm uppercase tracking-widest italic">lamine.ndiaye@gm-maintenance.sn</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-3/5 p-16">
+                    <form onsubmit="return false;" class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <input type="text" placeholder="VOTRE NOM" class="w-full border-b-2 border-slate-200 py-4 focus:outline-none focus:border-amber-500 font-black text-sm uppercase tracking-widest bg-transparent transition-all">
+                            <input type="email" placeholder="EMAIL PROFESSIONNEL" class="w-full border-b-2 border-slate-200 py-4 focus:outline-none focus:border-amber-500 font-black text-sm uppercase tracking-widest bg-transparent transition-all">
+                        </div>
+                        <div class="relative">
+                            <select class="w-full border-b-2 border-slate-200 py-4 focus:outline-none focus:border-amber-500 font-black text-sm uppercase tracking-widest bg-transparent appearance-none">
+                                <option>MAINTENANCE SOCOCIM</option>
+                                <option>PROJET CHAUDRONNERIE</option>
+                                <option>MAINTENANCE ÉLECTRIQUE</option>
+                                <option>AUTRE DEMANDE</option>
+                            </select>
+                            <i class="fas fa-chevron-down absolute right-0 top-1/2 -translate-y-1/2 text-slate-300"></i>
+                        </div>
+                        <textarea rows="4" placeholder="VOTRE MESSAGE" class="w-full border-b-2 border-slate-200 py-4 focus:outline-none focus:border-amber-500 font-black text-sm uppercase tracking-widest bg-transparent transition-all"></textarea>
+                        
+                        <button class="bg-slate-900 text-white w-full py-6 rounded-2xl font-black uppercase tracking-[0.3em] hover:bg-amber-500 transition-all shadow-xl group">
+                            Envoyer le brief <i class="fas fa-paper-plane ml-4 group-hover:translate-x-2 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-20 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+            <div class="flex items-center mb-10">
+                <div class="logo-gm w-10 h-10 rounded-lg flex items-center justify-center shadow-lg border-2 border-white">
+                    <span class="text-white font-black text-sm tracking-tighter italic">GM</span>
+                </div>
+                <span class="ml-3 text-xl font-black text-slate-900 leading-none uppercase tracking-tighter italic underline decoration-amber-500 decoration-4">General Maintenance</span>
+            </div>
+            <div class="flex space-x-12 mb-10 text-xs font-black uppercase tracking-[0.3em] text-slate-400">
+                <a href="#" class="hover:text-amber-500 transition-colors">Politique</a>
+                <a href="#" class="hover:text-amber-500 transition-colors">Carrières</a>
+                <a href="#" class="hover:text-amber-500 transition-colors">RSE Sococim</a>
+            </div>
+            <p class="text-[10px] text-slate-300 font-bold uppercase tracking-widest">© 2016-2025 GM Group Industrial Services - Thiès, Sénégal.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

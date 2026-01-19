@@ -1,0 +1,7 @@
+{
+  "name": "general maintenance",
+  "description": "Une suite créative tout-en-un utilisant les modèles Gemini les plus avancés pour la génération de texte, d'images et de parole, entièrement optimisée pour le français.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
